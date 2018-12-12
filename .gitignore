@@ -1,0 +1,5 @@
+*.class
+server/originator/.classpath
+server/originator/.project
+server/originator/.settings/
+server/originator/target/
