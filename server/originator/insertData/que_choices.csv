@@ -1,0 +1,65 @@
+choice_id,choice,is_image,question_id
+1,Only (a) is TRUE.,0,2
+2,Only (b) is TRUE,0,2
+3,Both (a) and (b) are TRUE.,0,2
+4,Neither (a) nor (b) are TRUE,0,2
+5,A parentheses balancing program,0,4
+6,Tracking of local variables at run time,0,4
+7,Compiler Syntax Analyzer,0,4
+8,All of the mentioned,0,4
+9,Something between -5 and -15,0,5
+10,Something between 5 and -5,0,5
+11,Something between 5 and 15,0,5
+12,Something between 15 and 100,0,5
+13,Jennifer,0,8
+14,Andy,0,8
+15,Tim,0,8
+16,Andy’s father,0,8
+17,An unnamed narrator,0,8
+18,Eating xoi with his father gave Andy a stomachache,0,9
+19,Andy was upset when he saw Jennifer holding hands with Tim.,0,9
+20,Andy was unhappy about the restaurant his father had selected.,0,9
+21,Andy was upset with Jennifer for making him miss the party.,0,9
+22,Andy mistakenly thought that Tim was his best friend.,0,9
+23,mysterious,0,10
+24,lively,0,10
+25,dull,0,10
+26,upsetting,0,10
+27,remarkable,0,10
+28,hearing Tim and Jennifer laughing and talking.,0,11
+29,the fact that it stuck to his fingernails.,0,11
+30,sitting at a table with Tim and Jennifer while he ate.,0,11
+31,the fact that his father made the xôi.,0,11
+32,seeing Tim and Jennifer eating xôi.,0,11
+33,Andy and his father,0,12
+34,Andy and Tim.,0,12
+35,Andy’s father and Tim,0,12
+36,Jennifer and Tim,0,12
+37,Jennifer and Andy,0,12
+38,TRUE,0,15
+39,FALSE,0,15
+40,0,0,15
+41,comilation error,0,15
+42,throws exception,0,15
+43,C:\\Users\\Jyoti\\Documents\\excelSheet\\a14A.png,1,14
+44,C:\\Users\\Jyoti\\Documents\\excelSheet\\a14B.png,1,14
+45,C:\\Users\\Jyoti\\Documents\\excelSheet\\a14C.png,1,14
+46,C:\\Users\\Jyoti\\Documents\\excelSheet\\a14D.png,1,14
+47,C:\\Users\\Jyoti\\Documents\\excelSheet\\a14E.png,1,14
+48,Hello,0,17
+49,Hellow,0,17
+50,Compilation Error,0,17
+51,Throws an exception,0,17
+52,None of these,0,17
+53,C:\\Users\\Jyoti\\Documents\\excelSheet\\a20A.png,1,20
+54,C:\\Users\\Jyoti\\Documents\\excelSheet\\a20B.png,1,20
+55,C:\\Users\\Jyoti\\Documents\\excelSheet\\a20C.png,1,20
+56,C:\\Users\\Jyoti\\Documents\\excelSheet\\a20D.png,1,20
+57,NumberFormat exception,0,19
+58,Arithmetic Exception,0,19
+59,NullPointer Exception,0,19
+60,None of these,0,19
+61,C:\\Users\\Jyoti\\Documents\\excelSheet\\a18A.png,1,18
+62,C:\\Users\\Jyoti\\Documents\\excelSheet\\a18B.png,1,18
+63,C:\\Users\\Jyoti\\Documents\\excelSheet\\a18C.png,1,18
+64,C:\\Users\\Jyoti\\Documents\\excelSheet\\a18D.png,1,18

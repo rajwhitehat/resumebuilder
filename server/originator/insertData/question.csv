@@ -1,0 +1,21 @@
+question_id,question,type_id,answer,is_image,subject_id
+1,class Main { public static void main(String args[]) { System.out.println(fun());  }   int fun() { return 20;  }  } ,3,Compilation error,0,1
+2,Which of the following statements is/are TRUE regarding JAVA ? (a) Constants that cannot be changed are declared using the ‘static’ keyword. (b) A class can only inherit one class but can implement multiple interfaces.,1,2,0,1
+3,Process of inserting an element in stack is called ____________,3,push,0,8
+4,Which of the following applications may use a stack?,1,4,0,8
+5,What is the value of the postfix expression 6 3 2 4 + – *:,1,4,0,8
+6," In a stack, if a user tries to remove an element from empty stack it is called underflow",2,t,0,8
+7,1,4,"8,9,10,11,12",0,1
+8,Who is telling this story?,4,5,0,1
+9,"What is the most reasonable conclusion to make from the statement in the first paragraph, “He felt sick.”?",4,2,0,1
+10,"According to the passage, Tim would most likely describe the party as:",4,3,0,1
+11,"Based on the last paragraph, it can be most reasonably inferred that Andy’s increasing enjoyment of eating xôi was related to:",4,1,0,1
+12,This passage is mainly about the relationship between:,4,5,0,1
+13,C:\\Users\\Jyoti\\Documents\\excelSheet\\q13.txt,3,FALSE,1,3
+14,In which of the following package Exception class exists.,1,4,0,1
+15,C:\\Users\\Jyoti\\Documents\\excelSheet\\q15.png,1,1,1,1
+16,System class is defined in ……………………………,3,java.lang package,0,1
+17,C:\\Users\\Jyoti\\Documents\\excelSheet\\q17.png,1,2,1,1
+18,C:\\Users\\Jyoti\\Documents\\excelSheet\\q18.png,1,2,1,1
+19,Which exception is thrown when divide by zero.,1,2,0,1
+20,which keyword is used to explicitly throw an exception,1,4,0,1
