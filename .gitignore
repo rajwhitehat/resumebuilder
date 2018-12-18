@@ -4,3 +4,4 @@ server/originator/.project
 server/originator/.settings/
 server/originator/target/
 .*
+*.xlsx
