@@ -8,7 +8,6 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.nytcoder</groupId>
 	<artifactId>originator.server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
@@ -23,7 +22,7 @@
 	</properties>
 
 	<dependencies>
-	<dependency>
+		<dependency>
 			<groupId>com.nytcoder</groupId>
 			<artifactId>originator.mcq.db</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -63,5 +62,27 @@
 			<artifactId>originator.resume.rest</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
+		<dependency>
+			<groupId>com.nytcoder</groupId>
+			<artifactId>originator.common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
+	<build>
+		<finalName>sbm</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+				
+			</plugins>
+	</build>
 </project>

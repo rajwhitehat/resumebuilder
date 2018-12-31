@@ -1,0 +1,6 @@
+package org.originator.common;
+
+public class RestUrlPath {
+	public static final String baseRestPath = "/api/rest/";
+	public static final String GetSubject = "getSubject";
+}
