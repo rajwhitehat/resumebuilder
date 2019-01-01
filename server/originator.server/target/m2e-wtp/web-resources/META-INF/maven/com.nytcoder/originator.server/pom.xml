@@ -9,7 +9,6 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>originator.server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<name>originator.server</name>
@@ -17,8 +16,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-		<start-class>com.nytcoder.Application</start-class>
+		<start-class>com.nytcoder.originator.server.App</start-class>
 	</properties>
 
 	<dependencies>

@@ -7,9 +7,7 @@
     <artifactId>originator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.nytcoder</groupId>
   <artifactId>originator.common</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>originator.common</name>
   <url>http://maven.apache.org</url>
   <properties>

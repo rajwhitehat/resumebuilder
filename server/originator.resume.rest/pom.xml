@@ -7,10 +7,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
   
-  <groupId>com.nytcoder</groupId>
   <artifactId>originator.resume.rest</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.1-SNAPSHOT</version>
 
   <name>originator.resume.rest</name>
   <url>http://maven.apache.org</url>

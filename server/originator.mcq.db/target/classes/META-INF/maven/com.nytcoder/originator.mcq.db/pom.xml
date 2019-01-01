@@ -8,10 +8,8 @@
  
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.nytcoder</groupId>
   <artifactId>originator.mcq.db</artifactId>
   <packaging>jar</packaging>
-  <version>0.0.1-SNAPSHOT</version>
 
   <name>originator.mcq.db</name>
   <url>http://maven.apache.org</url>
