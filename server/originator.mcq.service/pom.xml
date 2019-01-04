@@ -30,6 +30,10 @@
 			<artifactId>originator.mcq.model</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.nytcoder</groupId>
+			<artifactId>originator.common</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 </project>
