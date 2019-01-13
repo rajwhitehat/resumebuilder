@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nytcoder.originator.mcq.model.Questions;
+import com.nytcoder.originator.mcq.model.QueChoiceDto;
 import com.nytcoder.originator.mcq.model.Subject;
 import com.nytcoder.originator.mcq.service.McqService;
 
@@ -41,12 +41,12 @@ public class McqController {
 	
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@RequestMapping(value = RestUrlPath.GetQuestion, method = RequestMethod.GET)
-	public ResponseEntity<List<Questions>> getQuestion(@RequestParam(value = "subjectId") Long subjectId){
-		ResponseEntity<List<Questions>> responseEntity = null;
-		List<Questions> questions = new ArrayList<Questions>();
+	public ResponseEntity<List<QueChoiceDto>> getQuestion(@RequestParam(value = "subjectId") Long subjectId){
+		ResponseEntity<List<QueChoiceDto>> responseEntity = null;
+		List<QueChoiceDto> queChoiceDtos = new ArrayList<QueChoiceDto>();
 		try {
-			questions = mcqService.getQuestion(subjectId);
-			responseEntity = new ResponseEntity<List<Questions>>(questions, HttpStatus.OK);
+			queChoiceDtos = mcqService.getQuestion(subjectId);
+			responseEntity = new ResponseEntity<List<QueChoiceDto>>(queChoiceDtos, HttpStatus.OK);
 		}
 		catch(Exception e) {
 			return new ResponseEntity(e.getMessage(), HttpStatus.BAD_REQUEST);

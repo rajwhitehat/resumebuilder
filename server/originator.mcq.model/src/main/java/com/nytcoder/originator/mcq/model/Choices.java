@@ -1,6 +1,6 @@
 package com.nytcoder.originator.mcq.model;
 
-public interface QueChoices {
+public interface Choices {
 
 	public Long getChoiceId();
 

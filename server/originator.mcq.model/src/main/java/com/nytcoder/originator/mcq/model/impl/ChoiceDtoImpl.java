@@ -1,16 +1,17 @@
 package com.nytcoder.originator.mcq.model.impl;
 
-import com.nytcoder.originator.mcq.model.QueChoices;
+import com.nytcoder.originator.mcq.model.ChoiceDto;
 
-public class QueChoicesImpl implements QueChoices{
+public class ChoiceDtoImpl implements ChoiceDto{
 	private Long choiceId;
 	private String choice;
 	private Boolean isImage;
-	private Long questionId;
+	
 	@Override
 	public Long getChoiceId() {
 		return choiceId;
 	}
+	
 	@Override
 	public void setChoiceId(Long choiceId) {
 		this.choiceId = choiceId;
@@ -19,25 +20,22 @@ public class QueChoicesImpl implements QueChoices{
 	public String getChoice() {
 		return choice;
 	}
+
 	@Override
 	public void setChoice(String choice) {
 		this.choice = choice;
 	}
+
 	@Override
 	public Boolean getIsImage() {
 		return isImage;
 	}
+
 	@Override
 	public void setIsImage(Boolean isImage) {
 		this.isImage = isImage;
 	}
-	@Override
-	public Long getQuestionId() {
-		return questionId;
-	}
-	@Override
-	public void setQuestionId(Long questionId) {
-		this.questionId = questionId;
-	}
+
 	
+
 }
