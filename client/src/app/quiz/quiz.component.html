@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <nav id="sidebar">
+      <div class="sidebar-header">
+          <h3>Topic List</h3>
+      </div>
+
+      <ul class="list-unstyled components">
+          <li *ngFor="let sub of subjectList; let i = index">
+              <a>{{sub.subjectName}}</a>
+          </li>
+
+      </ul>
+  </nav>
+</div>
