@@ -41,25 +41,25 @@ choice_id,choice,is_image,question_id
 40,0,0,15
 41,comilation error,0,15
 42,throws exception,0,15
-43,C:\\Users\\Jyoti\\Documents\\excelSheet\\a14A.png,1,14
-44,C:\\Users\\Jyoti\\Documents\\excelSheet\\a14B.png,1,14
-45,C:\\Users\\Jyoti\\Documents\\excelSheet\\a14C.png,1,14
-46,C:\\Users\\Jyoti\\Documents\\excelSheet\\a14D.png,1,14
-47,C:\\Users\\Jyoti\\Documents\\excelSheet\\a14E.png,1,14
+43,a14A.png,1,14
+44,a14B.png,1,14
+45,a14C.png,1,14
+46,a14D.png,1,14
+47,a14E.png,1,14
 48,Hello,0,17
 49,Hellow,0,17
 50,Compilation Error,0,17
 51,Throws an exception,0,17
 52,None of these,0,17
-53,C:\\Users\\Jyoti\\Documents\\excelSheet\\a20A.png,1,20
-54,C:\\Users\\Jyoti\\Documents\\excelSheet\\a20B.png,1,20
-55,C:\\Users\\Jyoti\\Documents\\excelSheet\\a20C.png,1,20
-56,C:\\Users\\Jyoti\\Documents\\excelSheet\\a20D.png,1,20
+53,a20A.png,1,20
+54,a20B.png,1,20
+55,a20C.png,1,20
+56,a20D.png,1,20
 57,NumberFormat exception,0,19
 58,Arithmetic Exception,0,19
 59,NullPointer Exception,0,19
 60,None of these,0,19
-61,C:\\Users\\Jyoti\\Documents\\excelSheet\\a18A.png,1,18
-62,C:\\Users\\Jyoti\\Documents\\excelSheet\\a18B.png,1,18
-63,C:\\Users\\Jyoti\\Documents\\excelSheet\\a18C.png,1,18
-64,C:\\Users\\Jyoti\\Documents\\excelSheet\\a18D.png,1,18
+61,a18A.png,1,18
+62,a18B.png,1,18
+63,a18C.png,1,18
+64,a18D.png,1,18

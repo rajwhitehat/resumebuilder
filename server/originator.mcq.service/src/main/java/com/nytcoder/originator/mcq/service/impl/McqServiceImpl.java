@@ -41,7 +41,7 @@ public class McqServiceImpl implements McqService{
 	
 	@Autowired
 	McqMapper mcqMapper;
-	
+	private static String homeDir = System.getProperty("user.home") + "\\originator\\";
 	
 	@Override
 	public List<Subject> getAllSubject() throws Exception{
@@ -66,11 +66,14 @@ public class McqServiceImpl implements McqService{
 		List<ChoiceDto> choiceDtos = null;
 		QueChoiceDto queChoiceDto = null;
 		ChoiceDto choiceDto = null;
+		
 		for(QuestionsEntity queEntity : questionEntities) {
 			queChoiceDto = new QueChoiceDtoImpl();
 			queChoiceDto.setQuestionId(queEntity.getQuestionId());
-			queChoiceDto.setQuestion(queEntity.getQuestion());
 			queChoiceDto.setIsImage(queEntity.getIsImage());
+			String question= null;
+			question = queEntity.getIsImage() ? homeDir + queEntity.getQuestion() : queEntity.getQuestion();
+			queChoiceDto.setQuestion(question);
 			queChoiceDto.setTypeId(queEntity.getTypeId());
 			if(queEntity.getTypeId().equals(1l)) {
 				choiceDtos = new ArrayList<ChoiceDto>();
@@ -79,8 +82,10 @@ public class McqServiceImpl implements McqService{
 				for(ChoicesEntity choiceEntity : chEntity) {
 					choiceDto = new ChoiceDtoImpl();
 					choiceDto.setChoiceId(choiceEntity.getChoiceId());
-					choiceDto.setChoice(choiceEntity.getChoice());
 					choiceDto.setIsImage(choiceEntity.getIsImage());
+					String choice= null;
+					choice = choiceEntity.getIsImage() ? homeDir + choiceEntity.getChoice() : choiceEntity.getChoice();
+					choiceDto.setChoice(choice);
 					choiceDtos.add(choiceDto);
 				}
 				queChoiceDto.setChoices(choiceDtos);

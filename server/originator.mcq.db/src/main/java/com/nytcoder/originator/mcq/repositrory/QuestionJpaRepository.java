@@ -10,7 +10,7 @@ import com.nytcoder.originator.mcq.db.QuestionsEntity;
 
 public interface QuestionJpaRepository extends JpaRepository<QuestionsEntity, Long> {
 	
-	@Query(value = "select q from QuestionsEntity q where q.subjectId =?1 Order by RAND()")
+	@Query(value = "select q from QuestionsEntity q where q.subjectId =?1 and q.typeId<>4 Order by RAND()")
 	public List<QuestionsEntity> getQuestion(Long subjectId, Pageable pageRequest);
 
 }
