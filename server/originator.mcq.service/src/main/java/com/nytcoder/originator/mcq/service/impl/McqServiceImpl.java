@@ -41,8 +41,8 @@ public class McqServiceImpl implements McqService{
 	
 	@Autowired
 	McqMapper mcqMapper;
-	private static String homeDir = System.getProperty("user.home") + "\\originator\\";
-	
+	private static String questionDir = "..\\..\\server\\originator.server\\src\\main\\resources\\images\\question\\";
+	private static String answerDir = "..\\..\\server\\originator.server\\src\\main\\resources\\images\\answer\\";
 	@Override
 	public List<Subject> getAllSubject() throws Exception{
 		List<SubjectEntity> subjectEntities = subjectJpaRepository.getAllSubject();
@@ -72,7 +72,7 @@ public class McqServiceImpl implements McqService{
 			queChoiceDto.setQuestionId(queEntity.getQuestionId());
 			queChoiceDto.setIsImage(queEntity.getIsImage());
 			String question= null;
-			question = queEntity.getIsImage() ? homeDir + queEntity.getQuestion() : queEntity.getQuestion();
+			question = queEntity.getIsImage() ? questionDir + queEntity.getQuestion() : queEntity.getQuestion();
 			queChoiceDto.setQuestion(question);
 			queChoiceDto.setTypeId(queEntity.getTypeId());
 			if(queEntity.getTypeId().equals(1l)) {
@@ -84,7 +84,7 @@ public class McqServiceImpl implements McqService{
 					choiceDto.setChoiceId(choiceEntity.getChoiceId());
 					choiceDto.setIsImage(choiceEntity.getIsImage());
 					String choice= null;
-					choice = choiceEntity.getIsImage() ? homeDir + choiceEntity.getChoice() : choiceEntity.getChoice();
+					choice = choiceEntity.getIsImage() ? answerDir + choiceEntity.getChoice() : choiceEntity.getChoice();
 					choiceDto.setChoice(choice);
 					choiceDtos.add(choiceDto);
 				}
