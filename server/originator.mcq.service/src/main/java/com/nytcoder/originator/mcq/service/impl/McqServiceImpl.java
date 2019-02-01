@@ -1,10 +1,15 @@
 package com.nytcoder.originator.mcq.service.impl;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.originator.common.OriginatorConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -18,7 +23,6 @@ import com.nytcoder.originator.mcq.db.SubjectEntity;
 import com.nytcoder.originator.mcq.mapper.McqMapper;
 import com.nytcoder.originator.mcq.model.ChoiceDto;
 import com.nytcoder.originator.mcq.model.QueChoiceDto;
-import com.nytcoder.originator.mcq.model.Questions;
 import com.nytcoder.originator.mcq.model.Subject;
 import com.nytcoder.originator.mcq.model.impl.ChoiceDtoImpl;
 import com.nytcoder.originator.mcq.model.impl.QueChoiceDtoImpl;
@@ -41,8 +45,12 @@ public class McqServiceImpl implements McqService{
 	
 	@Autowired
 	McqMapper mcqMapper;
-	private static String questionDir = "..\\..\\server\\originator.server\\src\\main\\resources\\images\\question\\";
-	private static String answerDir = "..\\..\\server\\originator.server\\src\\main\\resources\\images\\answer\\";
+	private static String baseDir = "src\\main\\resources\\images\\";
+	private static String questionDir = "question\\";
+	private static String answerDir = "answer\\";
+	private static String UTF_FORMAT = "UTF-8";
+	private static String IMAGE_TYPE = "data:image/png;base64,";
+	
 	@Override
 	public List<Subject> getAllSubject() throws Exception{
 		List<SubjectEntity> subjectEntities = subjectJpaRepository.getAllSubject();
@@ -72,7 +80,7 @@ public class McqServiceImpl implements McqService{
 			queChoiceDto.setQuestionId(queEntity.getQuestionId());
 			queChoiceDto.setIsImage(queEntity.getIsImage());
 			String question= null;
-			question = queEntity.getIsImage() ? questionDir + queEntity.getQuestion() : queEntity.getQuestion();
+			question = getQuestion(queEntity);
 			queChoiceDto.setQuestion(question);
 			queChoiceDto.setTypeId(queEntity.getTypeId());
 			if(queEntity.getTypeId().equals(1l)) {
@@ -84,7 +92,7 @@ public class McqServiceImpl implements McqService{
 					choiceDto.setChoiceId(choiceEntity.getChoiceId());
 					choiceDto.setIsImage(choiceEntity.getIsImage());
 					String choice= null;
-					choice = choiceEntity.getIsImage() ? answerDir + choiceEntity.getChoice() : choiceEntity.getChoice();
+					choice = getChoice(choiceEntity);
 					choiceDto.setChoice(choice);
 					choiceDtos.add(choiceDto);
 				}
@@ -92,10 +100,32 @@ public class McqServiceImpl implements McqService{
 			}
 			queChoiceDtos.add(queChoiceDto);
 		}
-		
-		/*List<Questions> questions = new ArrayList<Questions>();
-		questions = mcqMapper.convertQuestionEntityToDTO(questionEntities);*/
 		return queChoiceDtos;
+	}
+	
+	private String getChoice(ChoicesEntity choiceEntity) throws Exception {
+		String choice = choiceEntity.getChoice();
+		if(choiceEntity.getIsImage()) {
+			File file = new File(baseDir + answerDir + choice);
+			choice = IMAGE_TYPE + getImageInBase64(file);
+		}
+		return choice;
+	}
+	private String getQuestion(QuestionsEntity queEntity) throws Exception {
+		String question = queEntity.getQuestion();
+		if(queEntity.getIsImage()) {
+			File file = new File(baseDir + questionDir + question);
+			question = IMAGE_TYPE + getImageInBase64(file);
+		}
+		return question;
+	}
+	@SuppressWarnings("resource")
+	private String getImageInBase64(File file) throws Exception {
+		FileInputStream fileInputStreamReader = new FileInputStream(file);
+        byte[] bytes = new byte[(int)file.length()];
+        fileInputStreamReader.read(bytes);
+        String imageInBase64 = new String(Base64.encodeBase64(bytes), UTF_FORMAT);
+        return imageInBase64; 
 	}
 	
 	
