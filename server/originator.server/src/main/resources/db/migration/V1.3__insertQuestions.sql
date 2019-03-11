@@ -1,4 +1,4 @@
-load data local infile './insertData/question.csv' into table questions
+load data local infile './src/main/resources/insertData/question.csv' into table questions
 Fields terminated by ','
 OPTIONALLY ENCLOSED BY '"'
 Lines terminated by '\r\n'

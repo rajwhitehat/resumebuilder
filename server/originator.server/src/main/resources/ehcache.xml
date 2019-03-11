@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd"
+	updateCheck="true"
+	monitoring="autodetect"
+	dynamicConfig="true">
+
+	<diskStore path="C:\sbm\cache" />
+
+	<cache name="unitOfMeasurement"
+		maxEntriesLocalHeap="10000"
+		maxEntriesLocalDisk="1000"
+		eternal="false"
+		diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="3000" timeToLiveSeconds="3000"
+		memoryStoreEvictionPolicy="LFU"
+		overflowToDisk="false"
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	
+	<cache name="country"
+		maxEntriesLocalHeap="10000"
+		maxEntriesLocalDisk="1000"
+		eternal="false"
+		diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="3000" timeToLiveSeconds="3000"
+		memoryStoreEvictionPolicy="LFU"
+		overflowToDisk="false"
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	<cache name="state"
+		maxEntriesLocalHeap="10000"
+		maxEntriesLocalDisk="1000"
+		eternal="false"
+		diskSpoolBufferSizeMB="20"
+		timeToIdleSeconds="3000" timeToLiveSeconds="3000"
+		memoryStoreEvictionPolicy="LFU"
+		overflowToDisk="false"
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	
+
+</ehcache>

@@ -4,7 +4,7 @@
 <parent>
 		<groupId>com.nytcoder</groupId>
 		<artifactId>originator</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>${originator.version}</version>
 	</parent>
   
   <artifactId>originator.resume.rest</artifactId>
@@ -21,12 +21,10 @@
     <dependency>
 			<groupId>com.nytcoder</groupId>
 			<artifactId>originator.resume.service</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.nytcoder</groupId>
 			<artifactId>originator.resume.model</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
   </dependencies>
 </project>

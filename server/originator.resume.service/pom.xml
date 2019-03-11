@@ -3,7 +3,7 @@
   <parent>
 		<groupId>com.nytcoder</groupId>
 		<artifactId>originator</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>${originator.version}</version>
 	</parent>
   
   <modelVersion>4.0.0</modelVersion>
@@ -22,12 +22,10 @@
     <dependency>
 			<groupId>com.nytcoder</groupId>
 			<artifactId>originator.resume.db</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>com.nytcoder</groupId>
 			<artifactId>originator.resume.model</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
     
   </dependencies>

@@ -1,4 +1,4 @@
-load data local infile './insertData/que_choices.csv' into table choices
+load data local infile './src/main/resources/insertData/que_choices.csv' into table choices
 Fields terminated by ','
 OPTIONALLY ENCLOSED BY '"'
 Lines terminated by '\r\n'
