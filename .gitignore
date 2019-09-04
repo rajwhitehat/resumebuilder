@@ -5,3 +5,5 @@ server/originator/.settings/
 server/originator/target/
 .*
 *.xlsx
+**/target
+**/src/main/webapp

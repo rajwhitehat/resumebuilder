@@ -39,6 +39,11 @@ public class McqController {
 		return responseEntity;
 	}
 	
+
+	@RequestMapping(value = "test", method = RequestMethod.GET)
+	public String test(){
+		return ("<h1>Welcome</h1>");
+	}
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@RequestMapping(value = RestUrlPath.GetQuestion, method = RequestMethod.GET)
 	public ResponseEntity<List<QueChoiceDto>> getQuestion(@RequestParam(value = "subjectId") Long subjectId){
