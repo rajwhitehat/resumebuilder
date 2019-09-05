@@ -426,6 +426,10 @@
 			<groupId>com.nytcoder</groupId>
 			<artifactId>originator.common</artifactId>
 		</dependency>
+			<dependency>
+			<groupId>com.nytcoder</groupId>
+			<artifactId>originator.security.db</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>originator</finalName>

@@ -1,0 +1,30 @@
+
+:host{
+    background-image: url("/assets/img/login-background.svg");
+   //background-color: springgreen;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+   
+ 
+  }
+
+  #btn-login {
+    background-color: #14e240;
+    border-color: #6bd098
+  }
+
+  #btn-fblogin{
+    background-color: #2196F3;
+    border-color: #518fce;
+  }
+
+  #signupbox {
+      .form-group{
+          label {
+              color: white;
+          }
+      }
+  }

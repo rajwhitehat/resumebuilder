@@ -29,6 +29,7 @@
 		<module>originator.resume.service</module>
 		<module>originator.resume.rest</module>
 		<module>originator.common</module>
+		<module>originator.security.db</module>
 	</modules>
 	
 	<dependencies>
@@ -220,6 +221,11 @@
 			<dependency>
 				<groupId>com.nytcoder</groupId>
 				<artifactId>originator.common</artifactId>
+				<version>${originator.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.nytcoder</groupId>
+				<artifactId>originator.security.db</artifactId>
 				<version>${originator.version}</version>
 			</dependency>
 			<dependency>
